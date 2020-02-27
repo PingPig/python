@@ -1,9 +1,9 @@
 ------This is FoFa SearchAPI UserName And Password-----
-fofa_name:"1121860875@qq.com"
-fofa_api:"674e75ec57e0857f1b93516d74245841"
+fofa_name:"xxxx@sina.com"
+fofa_api:"xxxxx"
 fofa
 ------This is Shodan SearchAPI UserName And Password-----
-shodan_api:"QsLloESzY3u7gCtCtxv0irZZyCbQayZN"
+shodan_api:"xxxx"
 ------This is FoFa SearchAPI UserName And Password-----
-zoomeyes_username:"1121860875@qq.com"
-zoomeyes_password:"Wp1998626"
+zoomeyes_username:"xxx@sina.com"
+zoomeyes_password:"xxxx"
