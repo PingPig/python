@@ -1,0 +1,9 @@
+------This is FoFa SearchAPI UserName And Password-----
+fofa_name:"1121860875@qq.com"
+fofa_api:"674e75ec57e0857f1b93516d74245841"
+fofa
+------This is Shodan SearchAPI UserName And Password-----
+shodan_api:"QsLloESzY3u7gCtCtxv0irZZyCbQayZN"
+------This is FoFa SearchAPI UserName And Password-----
+zoomeyes_username:"1121860875@qq.com"
+zoomeyes_password:"Wp1998626"
