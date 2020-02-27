@@ -3,8 +3,8 @@ import json
 import os
 
 data = {
-    'username': '1121860875@qq.com',
-    'password': 'Wp1998626'
+    'username': 'xxxxx@.com',
+    'password': 'xxxxxx'
 }
 jsonData = json.dumps(data,indent=4)
 r = requests.post('https://api.zoomeye.org/user/login',data=jsonData)
