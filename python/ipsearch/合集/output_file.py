@@ -11,11 +11,6 @@ import requests
 target = 'app="phpMyAdmin" && country="CN"'
 f = open('user_pwd.txt')
 d = f.read()
-# fn = re.findall(r'fofa_name:"([^"]+)"',d)
-# fa = re.findall(r'fofa_api:"([^"]+)"',d)
-# sa = re.findall(r'shodan_api:"([^"]+)"',d)
-# zu = re.findall(r'zoomeyes_username:"([^"]+)"',d)
-# zp = re.findall(r'zoomeyes_password:"([^"]+)"',d)
 def Fofa_Search_Api(Fofa_target):
     Fofa_email = re.findall(r'fofa_name:"([^"]+)"',d)
     Fofa_key = re.findall(r'fofa_api:"([^"]+)"',d)
