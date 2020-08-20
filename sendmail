@@ -1,1 +1,45 @@
 
+import mimetypes
+import smtplib
+from email import encoders
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email.mime.text import MIMEText
+import  datetime
+filepath = "xxx.zip"
+smtp_server = "xxx.com"
+username = "xxx.com"
+password = "xxxx"
+sender = 'xxx@163.com'
+with open('mail.txt','r+') as f:
+    for receivers in f:
+        time = datetime.datetime.today().strftime("%m-%d %H：%M")
+        msg = MIMEMultipart()
+        # 邮件正文
+        content = 'xxx'
+        msg.attach(MIMEText(content.format(time),'plain','utf-8'))
+        msg['From'] = sender
+        msg['To'] = receivers
+        subject = "xxx".format(time)
+        msg['Subject'] = subject
+
+        data = open(filepath, 'rb')
+        ctype, encoding = mimetypes.guess_type(filepath)
+        if ctype is None or encoding is not None:
+            ctype = 'application/octet-stream'
+        maintype, subtype = ctype.split('/', 1)
+        file_msg = MIMEBase(maintype, subtype)
+        file_msg.set_payload(data.read())
+        data.close()
+        encoders.encode_base64(file_msg)  # 把附件编码
+        file_msg.add_header('Content-Disposition', 'attachment', filename="xxx.zip")  # 修改邮件头
+        msg.attach(file_msg)
+        try:
+            server = smtplib.SMTP(smtp_server,2525)
+            server.login(username,password)
+            server.sendmail(sender,receivers,msg.as_string())
+            server.quit()
+            print("发送成功")
+        except Exception as err:
+            print("发送失败")
+            print(err)
